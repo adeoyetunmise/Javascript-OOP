@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car {
+            constructor(owner, color, brand){
+                this.owner = owner
+                this.color = color
+                this.brand = brand
+            }
+            move() {
+                return `The owner of the car is ${this.owner} and the colour is ${this.color}
+                 and the brand is ${this .brand}`
+            }
+        };
+        let car1 =  new Car("Tunmise","red","jjkjk")
+        let car2 = new Car()
+        let car1m = car1.move()
+        console.log(car1m);
+        console.log(car1);
+
+        class Truck extends Car {
+            constructor(owner, color, brand, back){
+                super(owner, color, brand)
+                this.backOfTruck = back 
+                  
+            }
+        }
+
+        let Truck1 = new Truck("Adeoye", "Pink", "Tesla", "Trailer")
+        console.log(Truck1);
+    </script>
+</body>
+</html>

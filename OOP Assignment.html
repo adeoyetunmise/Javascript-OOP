@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+
+        class Country{
+            constructor(name, capital, continent, currency, age, colours, population, corruption){
+                this.name = name
+                this.capital = capital
+                this.continent = continent
+                this.currency = currency
+                this.age = age
+                this.colours = colours
+                this.population = population
+                this.corruption = corruption
+            }
+        }
+        let country1 = new Country("Nigeria","Abuja","Africa","Naira","63","Green and White","250 Million", true)
+        
+        show.innerHTML = `
+        <h5>${country1}</h5>
+
+        <h5>${this.name}</h5>
+        <h3>${this.capital}</h3>
+        <h3>${this.continent}</h3>
+        <h3>${this.currency}</h3>
+        <h3>${this.age}</h3>
+        <h3>${this.colours}</h3>
+        <h3>${this.population}</h3>
+        <h3>${this.corruption}</h3>
+
+
+        `
+        console.log(country1);
+
+        class SouthAfrica extends Country{
+            constructor(name, capital, continent, currency, age, colours, population, corruption){
+                super(name, capital, continent, currency, age, colours, population, corruption)
+                
+            }
+        }
+        let nig = new SouthAfrica("SouthAfrica","CapeTOwn","Africa","Rand","113","Black,Yellow,Green,Red and White","59 Million", false)
+           console.log(nig);
+
+        class Kenya extends Country{
+            constructor(name, capital, continent, currency, age, colours, population, corruption){
+                super(name, capital, continent, currency, age, colours, population, corruption)
+                
+            }
+        }
+        let ken = new Kenya ("Kenya", "Africa","Africa", "Kenya Shilling","60","Black,Red,Green and White", "53 Million",false)
+        console.log(ken);
+    </script>
+</body>
+</html>
